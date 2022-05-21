@@ -8,9 +8,9 @@ mkdir -p /data/web_static/shared/
 
 mkdir -p /data/web_static/releases/test/
 
-chown -R ubuntu:ubuntu /data/
+sudo chown -hR ubuntu:ubuntu /data
 
-echo -e "<html>
+echo "<html>
   <head>
   </head>
   <body>
@@ -18,7 +18,7 @@ echo -e "<html>
   </body>
 </html>" > /data/web_static/releases/test/index.html
 
-ln -sf /data/web_static/releases/test/ /data/web_static/current
+sudo ln -sf /data/web_static/releases/test/ /data/web_static/current
 
 sed -i '/listen 80 default_server;/a location /hbnb_static { alias /data/web_static/current/;}' /etc/nginx/sites-available/default
 
