@@ -4,13 +4,13 @@
 sudo apt-get update
 sudo apt-get -y install nginx
 
-sudo mkdir -p /data/web_static/shared/
+mkdir -p /data/web_static/shared/
 
-sudo mkdir -p /data/web_static/releases/test/
+mkdir -p /data/web_static/releases/test/
 
-sudo chown -R ubuntu:ubuntu /data/
+chown -R ubuntu:ubuntu /data/
 
-sudo echo -e "<html>
+echo -e "<html>
   <head>
   </head>
   <body>
@@ -20,7 +20,7 @@ sudo echo -e "<html>
 
 ln -sf /data/web_static/releases/test/ /data/web_static/current
 
-sudo sed -i '53i \\tlocation \/hbnb_static {\n\t\t alias /data/web_static/current;\n\t}' /etc/nginx/sites-available/default
+sed -i '53i \\tlocation \/hbnb_static {\n\t\t alias /data/web_static/current;\n\t}' /etc/nginx/sites-available/default
 
 sudo service nginx restart
 
