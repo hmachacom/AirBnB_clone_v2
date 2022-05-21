@@ -20,7 +20,7 @@ echo -e "<html>
 
 ln -sf /data/web_static/releases/test/ /data/web_static/current
 
-sed -i '53i \\tlocation \/hbnb_static {\n\t\t alias /data/web_static/current;\n\t}' /etc/nginx/sites-available/default
+sed -i '/listen 80 default_server;/a location /hbnb_static { alias /data/web_static/current/;}' /etc/nginx/sites-available/default
 
 sudo service nginx restart
 
