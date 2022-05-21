@@ -6,7 +6,7 @@ sudo apt-get -y install nginx
 
 sudo mkdir -p /data/web_static/releases/test/
 sudo mkdir -p /data/web_static/shared/
-sudo chown -hR ubuntu:ubuntu /data
+sudo chown -R ubuntu:ubuntu /data
 
 sudo echo "<html>
   <head>
@@ -14,7 +14,7 @@ sudo echo "<html>
   <body>
     Holberton School
   </body>
-</html>" > /data/web_static/releases/test/index.html
+</html>" | sudo tee /data/web_static/releases/test/index.html
 
 sudo ln -sf /data/web_static/releases/test/ /data/web_static/current
 
