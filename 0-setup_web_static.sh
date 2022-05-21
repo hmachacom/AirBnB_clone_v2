@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#:::::::::::::::
+#Prepare your web servers
 
 sudo mkdir -p /data/web_static/shared/
 
