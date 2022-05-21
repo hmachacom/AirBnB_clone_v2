@@ -1,13 +1,16 @@
 #!/usr/bin/env bash
 #Prepare your web servers
 
+sudo apt-get update
+sudo apt-get -y install nginx
+
 sudo mkdir -p /data/web_static/shared/
 
 sudo mkdir -p /data/web_static/releases/test/
 
 sudo chown -R ubuntu:ubuntu /data/
 
-echo -e "<html>
+sudo echo -e "<html>
   <head>
   </head>
   <body>
