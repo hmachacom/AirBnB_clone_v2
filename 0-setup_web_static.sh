@@ -6,7 +6,6 @@ sudo apt-get -y install nginx
 
 sudo mkdir -p /data/web_static/releases/test/
 sudo mkdir -p /data/web_static/shared/
-sudo chown -R ubuntu:ubuntu /data
 
 sudo echo "<html>
   <head>
@@ -20,5 +19,6 @@ sudo ln -sf /data/web_static/releases/test/ /data/web_static/current
 
 sudo sed -i '/listen 80 default_server;/a location /hbnb_static { alias /data/web_static/current/;}' /etc/nginx/sites-available/default
 
+sudo chown -R ubuntu:ubuntu /data
 sudo service nginx restart
 
