@@ -9,7 +9,11 @@ from datetime import datetime
 
 
 def do_pack():
+    """_summary_
 
+    Returns:
+        _type_: _description_
+    """
     local('mkdir -p versions')
     name = 'web_static_{}'.format(datetime.now().strftime('%Y%m%d%H%M%S'))
     ruta = 'versions/{}'.format(name)
