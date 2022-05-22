@@ -30,7 +30,14 @@ def do_pack():
 
 
 def do_deploy(archive_path):
+    """_summary_
 
+    Args:
+        archive_path (_type_): _description_
+
+    Returns:
+        _type_: _description_
+    """
     if path.isfile(archive_path):
         name_file = archive_path[9:]
         new_path = "/data/web_static/releases/"
