@@ -8,8 +8,8 @@ from fabric.decorators import task, hosts, with_settings
 from os import path
 from datetime import datetime
 
-""" env.host['54.226.167.87', '34.148.202.126']
-env.user = "ubuntu" """
+env.hosts = ["54.226.167.87", "34.148.202.126"]
+env.user = "ubuntu"
 
 
 def do_pack():
