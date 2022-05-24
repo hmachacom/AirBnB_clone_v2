@@ -79,7 +79,7 @@ def n_is_integer_html(n):
         _type_: _description_}
     """
     if type(n) is int:
-        return render_template('5-number.html')
+        return render_template('5-number.html', number=n)
 
 
 if __name__ == "__main__":
