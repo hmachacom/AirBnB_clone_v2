@@ -65,7 +65,7 @@ def n_is_integer(n):
         _type_: _description_}
     """
     if type(n) is int:
-    	return "{} is a number".format(n)
+        return "{} is a number".format(n)
 
 
 if __name__ == "__main__":
